@@ -4,11 +4,7 @@ class Roman
     result = 0
     roman.split('').each_with_index do |c, i|
       next if i < roman.length-1 && @@ROMAN[c] < @@ROMAN[roman[i+1]]
-      if i > 0 && @@ROMAN[c] > @@ROMAN[roman[i-1]]
-        result += @@ROMAN[c] - @@ROMAN[roman[i-1]]
-      else
-        result += @@ROMAN[c]
-      end
+      result += (i > 0 && @@ROMAN[c] > @@ROMAN[roman[i-1]]) ? (@@ROMAN[c] - @@ROMAN[roman[i-1]]) : @@ROMAN[c]
     end
     result
   end
