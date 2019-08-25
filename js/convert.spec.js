@@ -7,4 +7,7 @@ describe('Individual Roman letters', function () {
   it('V converts to 5', function () {
     expect(toHinduArabic('V')).toBe(5);
   });
+  it('X converts to 10', function () {
+    expect(toHinduArabic('X')).toBe(10);
+  });
 });

@@ -1,5 +1,10 @@
 
+const ROMANS = {
+  'I': 1,
+  'V': 5,
+  'X': 10,
+};
 function toHinduArabic(roman) {
-    return roman == 'V' ? 5 : 1;
+    return ROMANS[roman];
 }
 module.exports = toHinduArabic;
