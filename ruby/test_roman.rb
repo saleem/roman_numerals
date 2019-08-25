@@ -17,4 +17,16 @@ describe Roman do
       @roman.convert('M').must_equal 1000
     end
   end
+
+  describe "Descending Roman letters" do
+    it "should convert VI to 6" do
+      @roman.convert('VI').must_equal 6
+    end
+    it "should convert MDCLXVI to 1666" do
+      @roman.convert('MDCLXVI').must_equal 1666
+    end
+    it "should convert MMXX to 2020" do
+      @roman.convert('MMXX').must_equal 2020
+    end
+  end
 end
