@@ -1,5 +1,10 @@
 const toHinduArabic = require('./convert');
 
-test('converts I to 1', () => {
-  expect(toHinduArabic('I')).toBe(1);
+describe('Individual Roman letters', function () {
+  it('I converts to 1', function () {
+    expect(toHinduArabic('I')).toBe(1);
+  });
+  it('V converts to 5', function () {
+    expect(toHinduArabic('V')).toBe(5);
+  });
 });
