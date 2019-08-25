@@ -1,0 +1,18 @@
+# Roman to Hindu-Arabic number conversion
+
+Roman numerals are I, V, X, L, C, D, and M. They correspond to the common (Hindu-Arabic) numbers 1, 5, 10, 50, 100, 500, and 1000, respectively.
+Roman numbers are written using these numerals; and are additive in all cases *except* when I precedes V, X precedes L or C, and C precedes D or M.
+In these cases, the smaller Roman number is *subtracted* from the former, viz:
+IV = 4
+XL = 40
+XC = 90
+CD = 400
+CM = 900
+
+This monorepo contains a few TDD'd samples of Roman to Hindu-Arabic conversions. The purpose is illustrative: how TDD aids in simple design and refactoring.
+
+It's instructive to examine not just the final solution but each individual commit.
+
+# References
+https://en.wikipedia.org/wiki/Roman_numerals
+  
