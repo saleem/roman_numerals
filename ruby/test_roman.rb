@@ -29,4 +29,16 @@ describe Roman do
       @roman.convert('MMXX').must_equal 2020
     end
   end
+
+  describe "Ascending Roman letters" do
+    it "should convert IV to 4" do
+      @roman.convert('IV').must_equal 4
+    end
+    it "should convert MCMLXIV to 1964" do
+      @roman.convert('MCMLXIV').must_equal 1964
+    end
+    it "should convert MMXIX to 2019" do
+      @roman.convert('MMXIX').must_equal 2019
+    end
+  end
 end
