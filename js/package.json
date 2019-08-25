@@ -1,0 +1,14 @@
+{
+  "name": "roman_numerals_js",
+  "version": "1.0.0",
+  "description": "Roman to Hindu-Arabic conversion",
+  "main": "convert.js",
+  "author": "Saleem Siddiqui",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
