@@ -11,3 +11,18 @@ describe('Individual Roman letters', function () {
     expect(toHinduArabic('M')).toBe(1000);
   });
 });
+
+describe('Descending denominations should add', function () {
+  it('two I\'s should convert to 2', function () {
+    expect(toHinduArabic('II')).toBe(2);
+  });
+  it('three I\'s should convert to 3', function () {
+    expect(toHinduArabic('III')).toBe(3);
+  });
+  it('MDCLXVI should convert to 1666', function () {
+    expect(toHinduArabic('MDCLXVI')).toBe(1666);
+  });  
+  it('MMXX should convert to 2020', function () {
+    expect(toHinduArabic('MMXX')).toBe(2020);
+  });  
+});

@@ -1,4 +1,3 @@
-
 const ROMANS = {
   'I': 1,
   'V': 5,
@@ -9,6 +8,14 @@ const ROMANS = {
   'M': 1000,
 };
 function toHinduArabic(roman) {
-    return ROMANS[roman];
+    if (roman.length === 1) {
+      return ROMANS[roman];
+    }
+    var result = 0;
+    var splitArray = roman.split();
+    roman.split("").forEach(c => {
+      result += ROMANS[c];
+    });
+    return result;
 }
 module.exports = toHinduArabic;
