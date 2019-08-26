@@ -7,23 +7,26 @@ const ROMANS = {
   'D': 500,
   'M': 1000,
 };
-function toHinduArabic(roman) {
-  const initialValue = 0;
-  return roman.split("").reduce((accumulator, _, i, initialSplitArray) => {
-    const currentValueDigits = ROMANS[initialSplitArray[i]];
-    const previousValueDigits = ROMANS[initialSplitArray[i-1]];
-    const nextValueDigits = ROMANS[initialSplitArray[i+1]];
+
+function reduceHinduArabic(currentTotal, _, i, initialRoman) {
+    const currentValueDigits = ROMANS[initialRoman[i]];
+    const previousValueDigits = ROMANS[initialRoman[i-1]];
+    const nextValueDigits = ROMANS[initialRoman[i+1]];
 
     if (currentValueDigits < nextValueDigits) {
-      return accumulator;
+      return currentTotal;
     }
     else if (currentValueDigits > previousValueDigits) {
-      return accumulator + (currentValueDigits - previousValueDigits);
+      return currentTotal + (currentValueDigits - previousValueDigits);
     }
     else {
-      return accumulator + currentValueDigits;
+      return currentTotal + currentValueDigits;
     }
-  }, initialValue);
+}
+
+function toHinduArabic(roman) {
+  const initialValue = 0;
+  return roman.split("").reduce(reduceHinduArabic, initialValue);
 }
 module.exports = toHinduArabic;
 
