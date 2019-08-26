@@ -8,19 +8,22 @@ const ROMANS = {
   'M': 1000,
 };
 function toHinduArabic(roman) {
-  var result = 0;
-  var splitArray = roman.split("");
-  for (var i = 0; i < splitArray.length; i++) {
-    if (ROMANS[roman[i]] < ROMANS[roman[i+1]]) {
-      continue;
+  const initialValue = 0;
+  return roman.split("").reduce((accumulator, _, i, initialSplitArray) => {
+    const currentValueDigits = ROMANS[initialSplitArray[i]];
+    const previousValueDigits = ROMANS[initialSplitArray[i-1]];
+    const nextValueDigits = ROMANS[initialSplitArray[i+1]];
+
+    if (currentValueDigits < nextValueDigits) {
+      return accumulator;
     }
-    else if (ROMANS[roman[i]] > ROMANS[roman[i-1]]) {
-      result += (ROMANS[roman[i]] - ROMANS[roman[i-1]]);
+    else if (currentValueDigits > previousValueDigits) {
+      return accumulator + (currentValueDigits - previousValueDigits);
     }
     else {
-      result += ROMANS[roman[i]];
+      return accumulator + currentValueDigits;
     }
-  }
-  return result;
+  }, initialValue);
 }
 module.exports = toHinduArabic;
+
