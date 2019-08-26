@@ -8,13 +8,9 @@ const ROMANS = {
   'M': 1000,
 };
 function toHinduArabic(roman) {
-  if (roman.length === 1) {
-    return ROMANS[roman];
-  }
   var result = 0;
-  var i = 0;
   var splitArray = roman.split("");
-  for (i = 0; i < splitArray.length; i++) {
+  for (var i = 0; i < splitArray.length; i++) {
     if (ROMANS[roman[i]] < ROMANS[roman[i+1]]) {
       continue;
     }

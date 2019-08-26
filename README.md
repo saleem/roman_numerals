@@ -6,11 +6,11 @@ Roman numbers are written using these numerals; and are additive in all cases *e
 
 In these cases, the smaller Roman number is *subtracted* from the former, viz:
 
-IV = 4
-XL = 40
-XC = 90
-CD = 400
-CM = 900
+* IV = 4
+* XL = 40
+* XC = 90
+* CD = 400
+* CM = 900
 
 This monorepo contains a few TDD'd samples of Roman to Hindu-Arabic conversions. The purpose is illustrative: how TDD aids in simple design and refactoring.
 
@@ -35,6 +35,8 @@ Install the `bundler` gem by running `gem install bundler` in a shell/terminal w
 Then, in a shell/terminal window, `cd` to the `ruby` directory and run `ruby test_roman.rb`.
 
 # References
+
 https://en.wikipedia.org/wiki/Roman_numerals
+
 https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system
   
