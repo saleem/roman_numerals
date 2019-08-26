@@ -24,7 +24,7 @@ This is a monorepo. When you clone it, you'll get small codebases in multiple la
 
 Make sure you have [node.js installed](https://nodejs.org/en/download/).
 
-Then, in a shell/terminal window, `cd` to the `js` directory and run `yarn init` followed by `yarn run test`.
+Then, in a shell/terminal window, `cd` to the `js` directory and run `yarn install` followed by `yarn run test`.
 
 ## Ruby
 
