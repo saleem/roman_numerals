@@ -34,6 +34,14 @@ Install the `bundler` gem by running `gem install bundler` in a shell/terminal w
 
 Then, in a shell/terminal window, `cd` to the `ruby` directory and run `ruby test_roman.rb`.
 
+## Kotlin
+
+Make sure you have [Kotlin installed](https://kotlinlang.org/docs/tutorials/command-line.html)
+
+**Linux / MacOS:** In a shell/terminal window, `cd` to the `kotlin` directory and run `./gradlew init` followed by `./gradlew test`
+
+**Windows:** In a cmd window, `cd` to the `kotlin` directory and run `gradlew.bat init` followed by `gradlew.bat test`
+
 # References
 
 https://en.wikipedia.org/wiki/Roman_numerals
