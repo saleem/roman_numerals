@@ -2,11 +2,12 @@
 
 Roman numerals are I, V, X, L, C, D, and M. They correspond to the common (Hindu-Arabic) numbers 1, 5, 10, 50, 100, 500, and 1000, respectively.
 
-Roman numbers are written using these numerals; and are additive in all cases *except* when I precedes V, X precedes L or C, and C precedes D or M.
+Roman numbers are written using these numerals; and are additive in all cases *except* when I precedes V or X, X precedes L or C, and C precedes D or M.
 
 In these cases, the smaller Roman number is *subtracted* from the former, viz:
 
 * IV = 4
+* IX = 9
 * XL = 40
 * XC = 90
 * CD = 400
