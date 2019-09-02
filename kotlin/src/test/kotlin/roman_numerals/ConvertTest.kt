@@ -16,10 +16,16 @@ class ConvertTest {
         assertEquals(1000, convert.convert("M"), "M should convert to 1000")
     }
 
-    @Test fun ascendingRomanLettersShouldBeAdded() {
+    @Test fun descendingRomanLettersShouldBeAdded() {
         assertEquals(6, convert.convert("VI"), "VI should convert to 6")
         assertEquals(1666, convert.convert("MDCLXVI"), "MDCLXVI should convert to 1666")
         assertEquals(2020, convert.convert("MMXX"), "MMXX should convert to 2020")
+    }
+
+    @Test fun ascendingRomanLettersShouldBeSubtracted() {
+        assertEquals(4, convert.convert("IV"), "IV should convert to 4")
+        assertEquals(1944, convert.convert("MCMXLIV"), "MCMXLIV should convert to 1944")
+        assertEquals(2019, convert.convert("MMXIX"), "IV should convert to 2019")
     }
 
     @Test fun shouldIgnoreUnrecognizableTextWithinValidRomanNumerals() {
